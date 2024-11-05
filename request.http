@@ -1,0 +1,19 @@
+### saveEntity
+
+POST http://localhost:8080/jpa-demo/entity
+Content-Type: application/json
+
+{
+  "name": "Burger",
+  "address": "Seoul",
+  "quantity": 10,
+  "price": 10000
+}
+
+### getAllDTOsByName
+
+GET http://localhost:8080/jpa-demo/dto?name=Burger
+
+### getAllEntitiesByNameLike
+
+GET http://localhost:8080/jpa-demo/entity?name=Bur%25
