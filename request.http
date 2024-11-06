@@ -4,10 +4,10 @@ POST http://localhost:8080/jpa-demo/entity
 Content-Type: application/json
 
 {
-  "name": "Burger",
+  "name": "Chicken",
   "address": "Seoul",
   "quantity": 10,
-  "price": 10000
+  "price": 10001
 }
 
 ### getAllDTOsByName
@@ -17,3 +17,7 @@ GET http://localhost:8080/jpa-demo/dto?name=Burger
 ### getAllEntitiesByNameLike
 
 GET http://localhost:8080/jpa-demo/entity?name=Bur%25
+
+### getAllEntitiesBySpecification
+
+GET http://localhost:8080/jpa-demo/entity/specification?maxPrice=10001

@@ -39,4 +39,10 @@ public class DemoController {
         List<DemoEntity> demoEntityList = demoService.getAllEntitiesByNameLike(name);
         return ResponseEntity.ok(demoEntityList);
     }
+
+    @GetMapping("/entity/specification")
+    public ResponseEntity<List<DemoEntity>> getAllEntitiesBySpecification(@RequestParam Integer maxPrice) {
+        List<DemoEntity> demoEntityList = demoService.getIsNotBurgerAndAtSeoulAndLessThan(maxPrice);
+        return ResponseEntity.ok(demoEntityList);
+    }
 }

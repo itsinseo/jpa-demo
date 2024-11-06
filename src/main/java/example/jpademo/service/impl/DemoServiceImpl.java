@@ -5,6 +5,7 @@ import example.jpademo.dto.DemoResponseDto;
 import example.jpademo.entity.DemoEntity;
 import example.jpademo.repository.DemoRepository;
 import example.jpademo.service.DemoService;
+import example.jpademo.spec.DemoSpecs;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -29,5 +30,10 @@ public class DemoServiceImpl implements DemoService {
     @Override
     public List<DemoEntity> getAllEntitiesByNameLike(String name) {
         return demoRepository.findAllByNameLike(name);
+    }
+
+    @Override
+    public List<DemoEntity> getIsNotBurgerAndAtSeoulAndLessThan(Integer maxPrice) {
+        return demoRepository.findAll(DemoSpecs.isNotBurgerAndAtSeoulAndLessThan(maxPrice));
     }
 }

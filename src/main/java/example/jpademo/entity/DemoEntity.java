@@ -30,9 +30,9 @@ public class DemoEntity {
     private Integer price;
 
     public DemoEntity(DemoRequestDto demoRequestDto) {
-        this.name = demoRequestDto.getName();
-        this.address = demoRequestDto.getAddress();
-        this.quantity = demoRequestDto.getQuantity();
-        this.price = demoRequestDto.getPrice();
+        this.name = demoRequestDto.name();
+        this.address = demoRequestDto.address();
+        this.quantity = demoRequestDto.quantity();
+        this.price = demoRequestDto.price();
     }
 }
