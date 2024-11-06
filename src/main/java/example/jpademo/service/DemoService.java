@@ -15,4 +15,6 @@ public interface DemoService {
     List<DemoEntity> getAllEntitiesByNameLike(String name);
 
     List<DemoEntity> getIsNotBurgerAndAtSeoulAndLessThan(Integer maxPrice);
+
+    List<DemoEntity> getHasChildWithOption(String option);
 }

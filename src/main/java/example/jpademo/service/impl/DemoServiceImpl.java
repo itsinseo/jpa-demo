@@ -36,4 +36,9 @@ public class DemoServiceImpl implements DemoService {
     public List<DemoEntity> getIsNotBurgerAndAtSeoulAndLessThan(Integer maxPrice) {
         return demoRepository.findAll(DemoSpecs.isNotBurgerAndAtSeoulAndLessThan(maxPrice));
     }
+
+    @Override
+    public List<DemoEntity> getHasChildWithOption(String option) {
+        return demoRepository.findAll(DemoSpecs.hasChildWithOption(option));
+    }
 }

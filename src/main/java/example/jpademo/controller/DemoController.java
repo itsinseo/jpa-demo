@@ -45,4 +45,10 @@ public class DemoController {
         List<DemoEntity> demoEntityList = demoService.getIsNotBurgerAndAtSeoulAndLessThan(maxPrice);
         return ResponseEntity.ok(demoEntityList);
     }
+
+    @GetMapping("/entity/specification-join")
+    public ResponseEntity<List<DemoEntity>> getAllEntitiesBySpecificationJoin(@RequestParam String option) {
+        List<DemoEntity> demoEntityList = demoService.getHasChildWithOption(option);
+        return ResponseEntity.ok(demoEntityList);
+    }
 }

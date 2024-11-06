@@ -21,3 +21,7 @@ GET http://localhost:8080/jpa-demo/entity?name=Bur%25
 ### getAllEntitiesBySpecification
 
 GET http://localhost:8080/jpa-demo/entity/specification?maxPrice=10001
+
+### getAllEntitiesBySpecificationJoin
+
+GET http://localhost:8080/jpa-demo/entity/specification-join?option=review
