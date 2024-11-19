@@ -1,9 +1,9 @@
 package example.jpademo.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import example.jpademo.dto.DemoRequestDto;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -32,7 +32,7 @@ public class DemoEntity {
     private Integer quantity;
     private Integer price;
 
-    @OneToMany(mappedBy = "demoEntity", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "demoEntity", cascade = CascadeType.REMOVE, fetch = FetchType.LAZY)
     private List<DemoChildEntity> demoChildEntityList;
 
     @Builder

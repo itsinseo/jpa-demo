@@ -4,7 +4,7 @@ POST http://localhost:8080/jpa-demo/entity
 Content-Type: application/json
 
 {
-  "name": "Chicken",
+  "name": "Burger",
   "address": "Seoul",
   "quantity": 10,
   "price": 10001
@@ -25,3 +25,12 @@ GET http://localhost:8080/jpa-demo/entity/specification?maxPrice=10001
 ### getAllEntitiesBySpecificationJoin
 
 GET http://localhost:8080/jpa-demo/entity/specification-join?option=review
+
+### getDemoEntitiesByNamePage
+GET http://localhost:8080/jpa-demo/entity/querydsl?keyword=Burg&priceLimit=20000&page=2&size=5
+
+### getDemoEntitiesWithChild
+GET http://localhost:8080/jpa-demo/entity-child/querydsl
+
+### getTuples
+GET http://localhost:8080/jpa-demo/tuple

@@ -10,5 +10,6 @@ import java.util.List;
 public interface DemoRepository extends JpaRepository<DemoEntity, Long>, JpaSpecificationExecutor<DemoEntity> {
 
     List<DemoResponseDto> findAllByName(String name);
+
     List<DemoEntity> findAllByNameLike(String name);
 }
